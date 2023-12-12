@@ -41,6 +41,7 @@ typedef struct instruction_s
 //function prototypes
 void push(int value, int line_number);
 void pall(); 
+void pint(int line_number);
 
 
 #endif

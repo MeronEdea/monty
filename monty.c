@@ -48,3 +48,17 @@ void pall() {
         printf("%d\n", stack[i]);
     }
 }
+
+/**
+ * Prints the value at the top of the stack, followed by a new line.
+ *
+ * @param line_number  The line number where the pint operation is performed.
+ *                     Used for error reporting.
+ */
+void pint(int line_number) {
+    if (top < 0) {
+        printf("L%d: can't pint, stack empty\n", line_number);
+        exit(EXIT_FAILURE);
+    }
+    printf("%d\n", stack[top]);
+}
