@@ -7,6 +7,7 @@ void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"add", add},
 		{NULL, NULL}
 	};
 
