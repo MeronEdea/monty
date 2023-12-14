@@ -15,6 +15,7 @@ void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int)
 		{"mod", mod},
 		{"mul", mul},
 		{"pchar", pchar},
+		{"pstr", pstr},
 		{NULL, NULL}
 	};
 
