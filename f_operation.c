@@ -17,6 +17,7 @@ void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int)
 		{"pchar", pchar},
 		{"pstr", pstr},
 		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 
