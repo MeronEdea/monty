@@ -12,7 +12,6 @@ void sub(int *stack, int *top) {
     stack[*top - 2] = second_top_element - top_element;
     (*top)--;
 
-    printf("Stack: ");
     for (int i = 0; i < *top; i++) {
         printf("%d ", stack[i]);
     }
