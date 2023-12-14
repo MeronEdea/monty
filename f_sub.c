@@ -2,7 +2,7 @@
 
 void sub(int *stack, int *top) {
     if (*top < 2) {
-        printf("Error: can't sub, stack too short\n");
+        printf("Error: L%d: can't sub, stack too short\n", __LINE__);
         exit(EXIT_FAILURE);
     }
 
@@ -12,6 +12,7 @@ void sub(int *stack, int *top) {
     stack[*top - 2] = second_top_element - top_element;
     (*top)--;
 
+    printf("Stack: ");
     for (int i = 0; i < *top; i++) {
         printf("%d ", stack[i]);
     }
