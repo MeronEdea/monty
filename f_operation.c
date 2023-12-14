@@ -5,6 +5,7 @@ void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int)
 	int i;
 	instruction_t operation[] = {
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 
