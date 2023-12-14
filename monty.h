@@ -1,10 +1,16 @@
-#ifndef MONTY
-#define MONTY
+#ifndef MONTY_H
+#define MONTY_H
+
+#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <ctype.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/stat.h>
 
 #define STACK_SIZE 100
 
@@ -38,10 +44,20 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-//function prototypes
-void push(int value, int line_number);
-void pall(); 
-void pint(int line_number);
+extern FILE *file;
+FILE *file;
 
+void (*operator_f)(stack_t **, unsigned int);
+void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int);
+
+
+/*function prototypes*/
+void push(stack_t **top, char *operand, unsigned int line_number);
+void free_stack(stack_t *stack);
+void pall(stack_t **top, unsigned int line_number);
+void pint(stack_t **top, unsigned int line_number);
+void pop(stack_t **top, unsigned int line_number);
+void swap(stack_t **top, unsigned int line_number);
+void add(stack_t **top, unsigned int line_number);
 
 #endif

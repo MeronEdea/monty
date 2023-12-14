@@ -9,7 +9,7 @@ int top = -1;
  * @param value        The integer value to be pushed.
  * @param line_number  The line number where the push operation is performed.
  */
-void push(int value, int line_number) {
+/*void _push(int value, int line_number) {
     if (top >= STACK_SIZE - 1) {
         printf("Stack overflow\n");
         exit(EXIT_FAILURE);
@@ -37,12 +37,12 @@ void push(int value, int line_number) {
     }
 
     stack[++top] = (int)converted_value;
-}
+}*/
 
 /**
  * Prints the values in the stack from top to bottom.
  */
-void pall() {
+void _pall() {
     int i;
     for (i = top; i >= 0; i--) {
         printf("%d\n", stack[i]);
@@ -55,10 +55,10 @@ void pall() {
  * @param line_number  The line number where the pint operation is performed.
  *                     Used for error reporting.
  */
-void pint(int line_number) {
+/*void _pint(int line_number) {
     if (top < 0) {
         printf("L%d: can't pint, stack empty\n", line_number);
         exit(EXIT_FAILURE);
     }
     printf("%d\n", stack[top]);
-}
+}*/
