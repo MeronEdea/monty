@@ -12,6 +12,8 @@ void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", _div},
+		{"mod", mod},
+		{"mul", mul},
 		{NULL, NULL}
 	};
 
