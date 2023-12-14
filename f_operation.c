@@ -10,6 +10,8 @@ void (*exe(stack_t **head, char *op, unsigned int n))(stack_t**, unsigned int)
 		{"add", add},
 		{"swap", swap},
 		{"nop", nop},
+		{"sub", sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 

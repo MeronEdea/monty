@@ -1,20 +1,23 @@
 #include "monty.h"
 
-void sub(int *stack, int *top) {
-    if (*top < 2) {
-        printf("Error: L%d: can't sub, stack too short\n", __LINE__);
-        exit(EXIT_FAILURE);
-    }
+void sub(stack_t **top, unsigned int line_number)
+{
+	stack_t *firstTop, *secondTop;
 
-    int top_element = stack[*top - 1];
-    int second_top_element = stack[*top - 2];
-
-    stack[*top - 2] = second_top_element - top_element;
-    (*top)--;
-
-    printf("Stack: ");
-    for (int i = 0; i < *top; i++) {
-        printf("%d ", stack[i]);
-    }
-    printf("\n");
+	if ((*top == NULL) || ((*top)->next == NULL))
+	{
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		fclose(file);
+		free_stack(*top);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		firstTop = *top;
+		secondTop = firstTop->next;
+		secondTop->n -= firstTop->n;
+		*top = secondTop;
+		(*top)->prev = NULL;
+		free(firstTop);
+	}
 }
